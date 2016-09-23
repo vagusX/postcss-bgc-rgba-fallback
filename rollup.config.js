@@ -5,16 +5,20 @@ const resolve = require('rollup-plugin-node-resolve')
 const eslint = require('rollup-plugin-eslint')
 const globals = require('rollup-plugin-node-globals')
 
+const pkg = require('./package.json')
+const external = Object.keys(pkg.dependencies)
+
 let cache
 
 rollup.rollup({
   entry: 'lib/index.js',
   cache: cache,
+  external: external,
   plugins: [
     eslint(),
     buble(),
     commonjs({
-      include: 'node_modules/**',
+      include: 'node_modules/**'
     }),
     globals(),
     resolve({
