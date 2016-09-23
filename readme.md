@@ -1,7 +1,9 @@
 http://rland.me.uk/cross-browser-alpha-transparent-background-10-2011
 https://robertnyman.com/2010/01/11/css-background-transparency-without-affecting-child-elements-through-rgba-and-filters/
 
-# PostCSS Bgb Rgba Fallback [![Build Status][ci-img]][ci]
+# PostCSS Bgb Rgba Fallback 
+![NPM](https://img.shields.io/npm/v/postcss-bgc-rgba-fallback.svg)
+[![Build Status](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback.svg)](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback)
 
 > [PostCSS](https://github.com/postcss/postcss) plugin to polyfill background rgba for IE8
 
