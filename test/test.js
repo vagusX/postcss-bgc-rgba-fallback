@@ -1,8 +1,9 @@
 const fs = require('fs')
+const path = require('path')
 const test = require('tape')
 const postcss = require('postcss')
 
-const plugin = require('../dist/bundle')
+const plugin = require(path.join(__dirname, '../dist/postcss-bgc-rgba-fallback'))
 
 test('polyfill for background rgba', t => {
   compareFixtures(t, 'bgc-rgba', 'should be polyfilled with filter prop')
