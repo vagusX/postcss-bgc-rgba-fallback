@@ -1,5 +1,7 @@
 # PostCSS Bgb Rgba Fallback 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vagusX/postcss-bgc-rgba-fallback.svg)](https://greenkeeper.io/)
+
 ![NPM](https://img.shields.io/npm/v/postcss-bgc-rgba-fallback.svg)
 [![Build Status](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback.svg)](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback)
 
