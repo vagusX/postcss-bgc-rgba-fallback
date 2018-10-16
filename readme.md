@@ -1,7 +1,9 @@
 # PostCSS Bgb Rgba Fallback 
 
 ![NPM](https://img.shields.io/npm/v/postcss-bgc-rgba-fallback.svg)
-[![Build Status](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback.svg)](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback)
+[![Traivs CI](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback.svg)](https://travis-ci.org/vagusX/postcss-bgc-rgba-fallback)
+[![Coverage](https://img.shields.io/codecov/c/github/vagusX/postcss-bgc-rgba-fallback.svg)](https://codecov.io/gh/vagusX/postcss-bgc-rgba-fallback)
+[![NPM Downloads](https://img.shields.io/npm/dm/postcss-bgc-rgba-fallback.svg)](https://www.npmjs.com/package/postcss-bgc-rgba-fallback)
 [![Greenkeeper badge](https://badges.greenkeeper.io/vagusX/postcss-bgc-rgba-fallback.svg)](https://greenkeeper.io/)
 
 > [PostCSS](https://github.com/postcss/postcss) plugin to polyfill background rgba for IE8
@@ -20,12 +22,12 @@ $ npm install postcss-bgc-rgba-fallback
 
 ```js
 // dependencies
-var fs = require("fs")
-var postcss = require("postcss")
-var bgcRgbaFallback = require("postcss-bgc-rgba-fallback")
+var fs = require('fs')
+var postcss = require('postcss')
+var bgcRgbaFallback = require('postcss-bgc-rgba-fallback')
 
 // css to be processed
-var css = fs.readFileSync("input.css", "utf8")
+var css = fs.readFileSync('input.css', 'utf8')
 
 // process css
 var output = postcss()
