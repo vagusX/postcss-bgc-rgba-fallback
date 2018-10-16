@@ -4,8 +4,9 @@
 node_modules/
 npm-debug.log
 
-dist/
+coverage/
 test/
 
 .travis.yml
-*.config.js
+.prettierrc
+.eslintrc*

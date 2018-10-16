@@ -1,32 +1,29 @@
+const postcss = require('postcss')
+const colorString = require('color-string')
 
-/**
- * Dependencies
- */
-import postcss from 'postcss'
-import colorString from 'color-string'
+const pkg = require('./package')
 
-/**
- * Constants
- */
-
-const pluginName = 'postcss-bgc-rgba-fallback'
+const pluginName = pkg.name
 
 const rbgIE9 = postcss.decl({
-  prop: 'background-color', value: 'transparent\\9'
+  prop: 'background-color',
+  value: 'transparent\\9'
 })
 
 const zoom = postcss.decl({
-  prop: 'zoom', value: '1'
+  prop: 'zoom',
+  value: '1'
 })
 
 const filterReset = postcss.decl({
-  prop: 'filter', value: 'none'
+  prop: 'filter',
+  value: 'none'
 })
 
 /**
  * PostCSS plugin to polyfill bgc rgba
  */
-export default postcss.plugin(pluginName, (options = {}) => root => {
+module.exports = postcss.plugin(pluginName, () => root => {
   root.walkRules(rule => {
     rule.walkDecls(decl => {
       if (decl.prop === 'background-color') {
