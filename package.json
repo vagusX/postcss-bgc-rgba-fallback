@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/vagusX/postcss-bgc-rgba-fallback#readme",
   "devDependencies": {
-    "rimraf": "^2.5.4",
+    "rimraf": "^2.6.2",
     "semantic-release": "^15.9.17",
-    "tape": "^4.6.0"
+    "tape": "^4.9.1"
   },
   "dependencies": {
-    "color-string": "^1.2.0",
-    "postcss": "^6.0.21"
+    "color-string": "^1.5.3",
+    "postcss": "^7.0.5"
   }
 }
