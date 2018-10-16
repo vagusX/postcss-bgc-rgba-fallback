@@ -1,9 +1,8 @@
 const fs = require('fs')
-const path = require('path')
 const test = require('tape')
 const postcss = require('postcss')
 
-const plugin = require(path.join(__dirname, '../dist/postcss-bgc-rgba-fallback'))
+const plugin = require('../index')
 
 test('polyfill for background rgba', t => {
   compareFixtures(t, 'bgc-rgba', 'should be polyfilled with filter prop')
@@ -13,8 +12,8 @@ test('polyfill for background rgba', t => {
 function compareFixtures (t, name, msg, opts = {}, postcssOpts = {}) {
   postcssOpts.from = filename(`fixtures/${name}`)
   const actual = postcss()
-  .use(plugin(opts))
-  .process(read(postcssOpts.from), postcssOpts).css
+    .use(plugin(opts))
+    .process(read(postcssOpts.from), postcssOpts).css
   const expected = read(filename(`fixtures/${name}.expected`))
   fs.writeFile(filename(`fixtures/${name}.actual`), actual)
   t.equal(actual, expected, msg)

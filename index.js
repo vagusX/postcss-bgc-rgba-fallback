@@ -2,8 +2,8 @@
 /**
  * Dependencies
  */
-import postcss from 'postcss'
-import colorString from 'color-string'
+const postcss = require('postcss')
+const colorString = require('color-string')
 
 /**
  * Constants
@@ -26,7 +26,7 @@ const filterReset = postcss.decl({
 /**
  * PostCSS plugin to polyfill bgc rgba
  */
-export default postcss.plugin(pluginName, (options = {}) => root => {
+module.exports = postcss.plugin(pluginName, (options = {}) => root => {
   root.walkRules(rule => {
     rule.walkDecls(decl => {
       if (decl.prop === 'background-color') {

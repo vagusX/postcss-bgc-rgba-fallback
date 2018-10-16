@@ -1,24 +1,14 @@
 {
   "name": "postcss-bgc-rgba-fallback",
   "description": "",
-  "main": "dist/postcss-bgc-rgba-fallback.js",
-  "jsnext:main": "dist/postcss-bgc-rgba-fallback.es2015.js",
+  "main": "index.js",
   "scripts": {
-    "build": "rimraf dist/** && NODE_ENV=production node rollup.config.js",
-    "build:dev": "node rollup.config.js",
-    "dev": "npm run build:dev && npm run watch",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "rimraf test/fixtures/*.actual.css && tape test/*.js",
-    "watch": "onchange lib -- npm run dev"
+    "semantic-release": "semantic-release",
+    "test": "rimraf test/fixtures/*.actual.css && tape test/*.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/vagusX/postcss-bgc-rgba-fallback.git"
-  },
-  "config": {
-    "ghooks": {
-      "commit-msg": "node ./node_modules/.bin/validate-commit-msg"
-    }
   },
   "author": "vagusX",
   "license": "MIT",
@@ -27,17 +17,9 @@
   },
   "homepage": "https://github.com/vagusX/postcss-bgc-rgba-fallback#readme",
   "devDependencies": {
-    "ghooks": "^2.0.3",
-    "onchange": "^3.0.2",
     "rimraf": "^2.5.4",
-    "rollup": "^0.58.2",
-    "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-eslint": "^4.0.0",
-    "rollup-plugin-node-globals": "^1.0.8",
-    "semantic-release": "^15.1.7",
-    "standard": "^11.0.1",
-    "tape": "^4.6.0",
-    "validate-commit-message": "^3.0.1"
+    "semantic-release": "^15.9.17",
+    "tape": "^4.6.0"
   },
   "dependencies": {
     "color-string": "^1.2.0",
