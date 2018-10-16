@@ -19,7 +19,7 @@ async function compareFixtures (t, name, msg, opts = {}, postcssOpts = {}) {
   const actualFilePath = filename(`fixtures/${name}.actual`)
 
   ensureExistsSync(actualFilePath)
-  fs.writeFile(actualFilePath, actual)
+  fs.writeFileSync(actualFilePath, actual)
   t.equal(actual, expected, msg)
 }
 
@@ -35,6 +35,6 @@ function ensureExistsSync (path) {
   try {
     fs.statSync(path)
   } catch (e) {
-    fs.writeFileSync(path, '', 'utf-8')
+    fs.writeFileSync(path, '')
   }
 }
