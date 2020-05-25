@@ -30,7 +30,7 @@
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
     "semantic-release": "^15.9.17",
-    "tape": "^4.9.1"
+    "tape": "^5.0.1"
   },
   "dependencies": {
     "color-string": "^1.5.3",
